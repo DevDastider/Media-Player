@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Multi Media</string>
+    <string name="music">Listen Music</string>
+    <string name="music_files">Music Files</string>
+    <string name="text_song">New Song is loading</string>
+    <string name="video">Watch Video</string>
+    <string name="video_files">Video Files</string>
+    <string name="media_player">Media Player</string>
+    <string name="images">Images</string>
+    <string name="new_image">Click New Image</string>
+    <string name="view_gallery">View Gallery</string>
+</resources>

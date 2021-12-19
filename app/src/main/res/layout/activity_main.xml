@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/frontPage">
+
+    <ImageView
+        android:id="@+id/multimedia"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/multimedia"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/mediaPlayerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:background="@color/design_default_color_primary_variant"
+        android:fontFamily="serif"
+        android:onClick="openMediaPlayer"
+        android:text="@string/media_player"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multimedia"
+        app:layout_constraintVertical_bias="0.199" />
+
+    <Button
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:background="@color/design_default_color_primary_variant"
+        android:fontFamily="serif"
+        android:onClick="openImages"
+        android:paddingStart="56dp"
+        android:paddingEnd="57dp"
+        android:text="@string/images"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mediaPlayerButton"
+        app:layout_constraintVertical_bias="0.098" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

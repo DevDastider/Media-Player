@@ -1,0 +1,6 @@
+<paths xmlns:android= "http://schemas.android.com/apk/res/android">
+    <!--<files-path
+        name="myimages"
+        path="/storage/emulated/0/Android/data/com.self.project.mediaplayer/files/Pictures"/>-->
+    <external-path name="my_images" path="/"/>
+</paths>

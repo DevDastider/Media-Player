@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.self.project.mediaplayer">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true"/>
+
+    <queries>
+        <intent>
+            <action android:name="com.google.android.youtube.api.service.START" />
+        </intent>
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MediaPlayer"
+        tools:ignore="ExtraText">
+        <activity
+            android:name=".image.DisplayImageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".image.GalleryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".image.ImageMenuActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".MediaPlayerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".video.YoutubePlayerActivity"
+            android:configChanges="orientation|screenSize|screenLayout"
+            android:exported="true" />
+        <activity
+            android:name=".video.VideoPlayerActivity"
+            android:configChanges="orientation|screenSize|screenLayout|uiMode|smallestScreenSize"
+            android:exported="true"
+            android:resizeableActivity="true" />
+        <activity
+            android:name=".video.VideoFilesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".music.MusicPlayerActivity"
+            android:configChanges="orientation|screenSize|screenLayout"
+            android:exported="true" /> <!-- android:screenOrientation="portrait" -->
+        <activity
+            android:name=".music.MusicFilesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.self.project.mediaplayer.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+
+        </provider>
+
+    </application>
+
+</manifest>
