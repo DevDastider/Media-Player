@@ -13,3 +13,5 @@
 .externalNativeBuild
 .cxx
 local.properties
+app/libs
+app/src/main/java/com/self/project/mediaplayer/video/YoutubePlayerActivity.kt

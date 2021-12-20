@@ -84,30 +84,16 @@ class VideoFilesActivity : AppCompatActivity(), PermissionListener, IVideoFilesA
             Log.d(debugTag, "Finally")
         }
 
-        //adding YoutubeVideos
-        items.add("Youtube Video 1")
-        items.add("Youtube Video 2")
-
         adapter.updateList(items)
     }
 
     override fun onItemsClicked(adapterPosition: Int) {
         //Toast.makeText(this, "Clicked: $videoName", Toast.LENGTH_LONG).show()
-        if (adapterPosition<4){
+
         startActivity(Intent(this, VideoPlayerActivity::class.java).apply {
             putExtra("position", adapterPosition)
             putExtra("videoList", myVideos)
         })
-        }
-        else if (adapterPosition==4){
-            startActivity(Intent(this, YoutubePlayerActivity::class.java).apply {
-                putExtra("id", "WgU7P6o-GkM")
-            })
-        }
-        else {
-            startActivity(Intent(this, YoutubePlayerActivity::class.java).apply {
-                putExtra("id", "rrwBnlYOp4g")
-            })
-        }
+
     }
 }
